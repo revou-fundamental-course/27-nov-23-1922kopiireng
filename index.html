@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katlik</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- header/navbar -->
+  <header id="navigation-bar" >
+    <div class="header">
+      <h2 class="judul">Welcome to Katlik</h2>
+      <h4 class="ket-judul">Hai Sobat, Selamat Datang di Katlik</h4>
+      <h5 class="ket-judul-penj">Sebuah web apps sederhanayang berfungsi untuk menghitungilai luas dan keliling bangun datar</h5>
+    </div>
+    <div class="navbar">
+      <button class="btn-segitiga">
+        <a style="text-decoration:none" href="#section-1">Luas Segitiga</a>
+      </button>
+      <br>
+      <button class="btn-kel">
+        <a style="text-decoration:none" href="#section-2">Keliling Segitiga</a>
+      </button>
+    </div>
+  </header>
+  <!-- section 1-->
+  <section id="section-1">
+    <!-- judul ls -->
+    <div class="judul-ls">
+      <h2>Luas Segitiga</h2>
+      <img src="./assets/segitiga.png" alt="Luas-segitiga">
+      <h5>Rumus Luas Segitiga yaitu : </h5>
+      <p class="rumus-ls">L = 1/2 x A x T</p>
+      <div class="keterangan">
+        <p>Dimana :</p>
+        <p>L = luas</p>
+        <p>A = Panjang Alas</p>
+        <p>T = Tinggi</p>
+      </div>
+      <hr class="garis">
+    </div>
+    <!-- Hitung Luas Segitiga -->
+    <!-- L = ½ x a x t -->
+    <div class="hitung-ls">
+      <!-- input -->
+      <div class="input">
+        <div id="error"></div>
+        <h2>Hitung Luas Segitiga</h2>
+        <form id="form" action="" method="GET">
+          <input class="i-alas" type="number" id="alas" placeholder="Nilai Alas" required="" oninvalid="this.setCustomValidity('Nilai Alas Tidak Boleh Kosong!')" oninput="setCustomValidity('')">
+          <input class="i-tinggi" type="number" id="tinggi" placeholder="Nilai Alas" required="" oninvalid="this.setCustomValidity('Nilai Tinggi Tidak Boleh Kosong!')" oninput="setCustomValidity('')">
+          <input type="text" id="hasil-luas" disabled>
+          <button onclick="hitungLuas()">Hitung</button>
+          <!-- <br> -->
+          <button type="reset" value="reset">Reset</button>
+        </form>
+      </div>
+      <!-- <div class="btn-ls">
+        <p id="ls-hasil"></p>
+        <button class="btn-hitung-ls" onclick="document.getElementById('demo').innerHTML">Hitung</button>
+        <button type="submit">Hitung</button>
+        <p id="hasil"></p>
+        <br>
+        <button class="btn-reset-ls">Reset</button>
+      </div> -->
+    </div>
+  </section>
+  <section id="section-2">
+    <div class="judul-ks">
+      <h2>Keliling Segitiga</h2>
+      <img src="./assets/segitiga.png" alt="">
+      <h5>Rumus Keliling Segitiga yaitu : </h5>
+      <p class="rumus-ks">K= S1 + S2 + S3</p>
+      <div class="keterangan">
+        <p>Dimana :</p>
+        <p>K = Keliling</p>
+        <p>S1 = Sisi A</p>
+        <p>S2 = Sisi B</p>
+        <p>S3 = Sisi C</p>
+      </div>
+      <hr class="garis">
+    </div>
+    <!-- Hitung Luas Segitiga -->
+    <!-- L = ½ x a x t -->
+    <div class="hitung-ks">
+      <!-- input -->
+      <div class="input">
+        <div id="error"></div>
+        <h2>Hitung Keliling Segitiga</h2>
+        <form id="form" action="" method="GET">
+          <input class="i-alas" type="number" id="s1" placeholder="Sisi A" required="" oninvalid="this.setCustomValidity('Sisi A Tidak Boleh Kosong!')" oninput="setCustomValidity('')">
+          <input class="i-tinggi" type="number" id="s2" placeholder="Sisi B" required="" oninvalid="this.setCustomValidity('Sisi B Boleh Kosong!')" oninput="setCustomValidity('')">
+          <input class="form-control" type="number" id="s3" placeholder="Sisi C" required="" oninvalid="this.setCustomValidity('Sisi C Tidak Boleh Kosong!')" oninput="setCustomValidity('')">
+          <input type="text" id="hasil-kel" disabled>
+          <button onclick="hitungKel()">Hitung</button>
+          <!-- <br> -->
+          <button type="reset" value="reset">Reset</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer>
+    <p>Author by Jefry Kurniawan</p>
+  </footer>
+  <script src="./js/script.js" type="text/javascript"></script>
+</body>
+</html>
